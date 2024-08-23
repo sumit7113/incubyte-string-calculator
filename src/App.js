@@ -1,6 +1,8 @@
+import AddNumbersComponent from "./Components/AddNumbersComponent.tsx";
+
 function App() {
   return (
-    <h1>App js</h1>
+    <AddNumbersComponent />
   );
 }
 
