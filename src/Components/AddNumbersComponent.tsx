@@ -22,6 +22,11 @@ function AddNumbersComponent() {
     }
   };
 
+  const errorStyles = {
+    color: "red",
+    textAlign: "center" as const,
+  };
+
   return (
     <div className={styles.mainContainer}>
       <h1>Incubyte String Calculator</h1>
@@ -35,7 +40,11 @@ function AddNumbersComponent() {
         <button onClick={handleCalculate}>Calculate Sum</button>
       </div>
       {result !== null && <div className={styles.result}>Result: {result}</div>}
-      {error && <div className={styles.result} style={{ color: "red" }}>{error}</div>}
+      {error && (
+        <div className={styles.result} style={errorStyles}>
+          {error}
+        </div>
+      )}
     </div>
   );
 }
